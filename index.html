@@ -6,8 +6,53 @@
 
 		<!-- My Stylesheets -->
 		<link rel="stylesheet" href="css/app.css" />
+		<script defer src="js/main.js"></script>
 		<title>Golf Score App</title>
 	</head>
 
-	<body></body>
+	<body>
+		<div id="course-options" class="container mx-auto flex justify-center">
+			<label for="course-select">Select Course</label>
+			<select id="course-select"></select>
+		</div>
+		<div id="card-container" class="container mx-auto flex mt-20">
+			<table
+				class="table-auto text-left flex items-start border border-slate-500"
+			>
+				<tr>
+					<th
+						id="holeNum"
+						class="text-3xl border border-collapse border-slate-200 px-2 py-4"
+					>
+						Hole
+					</th>
+					<td class="text-lg border border-slate-200 px-2">hello</td>
+				</tr>
+				<tr>
+					<th
+						id="totalYards"
+						class="text-3xl border border-collapse border-slate-200 px-2 py-4"
+					>
+						Yardage
+					</th>
+				</tr>
+				<tr>
+					<th
+						id="par"
+						class="text-3xl border border-collapse border-slate-200 px-2 py-4"
+					>
+						Par
+					</th>
+				</tr>
+				<tr>
+					<th
+						id="handicap"
+						class="text-3xl border border-collapse border-slate-200 px-2 py-4"
+					>
+						Handicap
+					</th>
+				</tr>
+			</table>
+		</div>
+	</body>
 </html>

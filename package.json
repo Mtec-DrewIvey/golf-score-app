@@ -98,8 +98,8 @@
 		"yaml": "^2.4.0"
 	},
 	"scripts": {
-		"build": "npx tailwindcss -i ./app.src.css -o ./css/app.css",
-		"watch": "npx tailwindcss -i ./app.src.css -o ./css/app.css --watch"
+		"build": "npx tailwindcss -i ./css/app.src.css -o ./css/app.css",
+		"watch": "npx tailwindcss -i ./css/app.src.css -o ./css/app.css --watch"
 	},
 	"keywords": [],
 	"author": "",
