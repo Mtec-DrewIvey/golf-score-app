@@ -5,7 +5,7 @@
 	"name": "golf-score-app",
 	"description": "Golf Score Web App",
 	"version": "1.0.0",
-	"main": "index.js",
+	"main": "main.js",
 	"type": "module",
 	"dependencies": {
 		"ansi-regex": "^6.0.1",

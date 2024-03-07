@@ -6,31 +6,35 @@
 
 		<!-- My Stylesheets -->
 		<link rel="stylesheet" href="css/app.css" />
-		<script defer src="js/main.js"></script>
+		<script defer src="js/main.js" type="module"></script>
 		<title>Golf Score App</title>
 	</head>
 
-	<body>
+	<body class="bg-green-800 text-white">
 		<div
 			id="course-options"
-			class="container mx-auto flex justify-center mb-4 items-center"
+			class="container flex justify-start my-4 items-center"
 		>
-			<label for="course-select" class="mx-6">Select Course</label>
-			<select id="course-select" class="py-2 px-4"></select>
+			<label for="course-select" class="mx-8 text-md">Select Course</label>
+			<select
+				id="course-select"
+				class="py-2 px-4 text-black rounded-md text-md"
+			></select>
 		</div>
-		<div id="tee-box-options" class="container mx-auto flex justify-center">
-			<label for="tee-box-select">Select Tee Box</label>
-			<select id="tee-box-select"></select>
+		<div id="tee-box-options" class="container flex justify-start items-center">
+			<label for="tee-box-select" class="mx-8 text-md">Select Tee Box</label>
+			<select
+				id="tee-box-select"
+				class="py-2 px-4 text-black rounded-md text-md"
+			></select>
 		</div>
+		<div id="displayCourseAndTeeType"></div>
 		<div id="card-container" class="container mx-auto flex mt-20">
 			<table
-				class="table-auto text-left flex items-start border border-slate-500"
+				class="table-auto text-left flex items-start border border-separate border-slate-500"
 			>
 				<tr>
-					<th
-						id="holeNum"
-						class="text-3xl border border-collapse border-slate-200 px-2 py-4"
-					>
+					<th id="holeNum" class="text-3xl border border-slate-200 px-2 py-4">
 						Hole
 					</th>
 					<td class="text-3xl border border-slate-200 px-2">Out</td>
@@ -38,24 +42,18 @@
 				<tr>
 					<th
 						id="totalYards"
-						class="text-3xl border border-collapse border-slate-200 px-2 py-4"
+						class="text-3xl border border-slate-200 px-2 py-4"
 					>
 						Yardage
 					</th>
 				</tr>
 				<tr>
-					<th
-						id="par"
-						class="text-3xl border border-collapse border-slate-200 px-2 py-4"
-					>
+					<th id="par" class="text-3xl border border-slate-200 px-2 py-4">
 						Par
 					</th>
 				</tr>
 				<tr>
-					<th
-						id="handicap"
-						class="text-3xl border border-collapse border-slate-200 px-2 py-4"
-					>
+					<th id="handicap" class="text-3xl border border-slate-200 px-2 py-4">
 						Handicap
 					</th>
 				</tr>
