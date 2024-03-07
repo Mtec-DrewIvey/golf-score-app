@@ -11,9 +11,7 @@ export async function getCourseInfo() {
 export async function getTeeBox() {
 	const course = await getCourseInfo();
 	const holes = course.holes;
-	// console.log(holes);
-	const hole1 = holes[0];
-	console.log(hole1);
+	const hole1 = holes[0]; // We only need to grab the teeType once per course so might as well just grab it from the first hole.
 	const teeBoxes = hole1.teeBoxes;
 
 	let teeBoxSelectHtml = `<option value="" selected disabled> Select a Tee Box </option>`;
@@ -26,4 +24,9 @@ export async function getTeeBox() {
 		}
 	});
 	document.getElementById("tee-box-select").innerHTML = teeBoxSelectHtml;
+}
+
+export async function getYards() {
+	const selectedTeeBox = document.getElementById("tee-box-select").value;
+	console.log(selectedTeeBox);
 }
