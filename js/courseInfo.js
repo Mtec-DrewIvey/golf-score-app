@@ -8,6 +8,7 @@ export async function getCourseInfo() {
 	return data;
 }
 
+// Pass variable as function parameter if reusing. Try to keep out of global namespace.
 export async function getTeeBox() {
 	const course = await getCourseInfo();
 	const holes = course.holes;
@@ -18,15 +19,10 @@ export async function getTeeBox() {
 
 	teeBoxes.forEach(function (teeBox, index) {
 		if (teeBox.teeType === "auto change location") {
-			return null;
+			return;
 		} else {
-			teeBoxSelectHtml += `<option value="${index}">${teeBox.teeType.toUpperCase()}`;
+			teeBoxSelectHtml += `<option value="${index}">${teeBox.teeType.toUpperCase()}</option>`;
 		}
 	});
 	document.getElementById("tee-box-select").innerHTML = teeBoxSelectHtml;
-}
-
-export async function getYards() {
-	const selectedTeeBox = document.getElementById("tee-box-select").value;
-	console.log(selectedTeeBox);
 }
