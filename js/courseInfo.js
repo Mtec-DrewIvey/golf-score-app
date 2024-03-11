@@ -1,9 +1,16 @@
 // Get course info when selected from the dropdown.
 export async function getCourseInfo() {
-	const selectedCourseId = document.getElementById("course-select").value;
+	const selectElement = document.getElementById("course-select");
+	const selectedOption = selectElement.options[selectElement.selectedIndex];
+	const courseName = selectedOption.textContent;
+	const selectedCourseId = selectElement.value;
 	const url = `https://exquisite-pastelito-9d4dd1.netlify.app/golfapi/course${selectedCourseId}.json`;
 	const response = await fetch(url);
 	const data = await response.json();
+
+	let courseHeaderHtml = `<h2 id="courseName">${courseName}</h2>`;
+	document.getElementById("displayCourseAndTeeType").innerHTML =
+		courseHeaderHtml;
 
 	return data;
 }

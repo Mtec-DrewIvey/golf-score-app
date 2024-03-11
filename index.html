@@ -12,38 +12,41 @@
 
 	<body class="bg-green-800 text-white">
 		<!-- Header - Contains options to select course and teeBox -->
-		<header
-			class="container mx-auto flex flex-col justify-start my-2 px-8 items-center mx-8 bg-emerald-900"
-		>
-			<div
-				id="course-options"
-				class="container flex justify-start my-4 mb-2 items-center"
-			>
-				<select
-					id="course-select"
-					class="py-2 px-4 text-black rounded-md text-sm"
-				></select>
+		<header class="flex bg-emerald-900 items-center px-4 py-2">
+			<div id="options-div" class="flex flex-col">
+				<div id="course-options" class="flex justify-start items-center">
+					<select
+						id="course-select"
+						class="rounded-md text-sm bg-transparent"
+					></select>
+				</div>
+				<div id="tee-box-options" class="flex justify-start items-center mt-2">
+					<select
+						id="tee-box-select"
+						class="rounded-md text-sm bg-transparent"
+					></select>
+				</div>
 			</div>
-			<div
-				id="tee-box-options"
-				class="container flex justify-start items-center mb-4"
-			>
-				<select
-					id="tee-box-select"
-					class="py-2 px-4 text-black rounded-md text-sm"
-				></select>
-			</div>
-			<div id="displayCourseAndTeeType"></div>
+			<div id="displayCourseAndTeeType" class="text-3xl mx-32"></div>
 		</header>
 
+		<div id="addPlayer" class="mx-6 my-4">
+			<button
+				id="addPlayerButton"
+				class="border border-green-600 rounded-md bg-green-700 p-2 hover:border-green-700 hover:bg-green-600 hover:scale-105 transition ease-in-out duration-300"
+			>
+				Add Player
+			</button>
+		</div>
+
 		<!-- Table for Front-9 -->
-		<div id="frontNine" class="container mx-auto mt-12 flex">
+		<div id="frontNine" class="container mx-auto mt-6 flex">
 			<table class="table-auto text-left mx-48 flex flex-col justify-start">
 				<caption class="caption-top text-xl mb-2">
 					Front 9
 				</caption>
 				<tr id="frontNineHoleRow">
-					<th class="text-md border border-slate-200 px-2 py-4">Hole</th>
+					<th class="text-md border border-slate-200 px-2 py-2">Hole</th>
 					<td
 						id="hole1"
 						class="text-md border border-slate-200 text-center w-20"
@@ -106,7 +109,7 @@
 					</th>
 				</tr>
 				<tr>
-					<th id="totalYards" class="text-md border border-slate-200 px-2 py-4">
+					<th id="totalYards" class="text-md border border-slate-200 px-2 py-2">
 						Yardage
 					</th>
 					<td
@@ -151,7 +154,7 @@
 					></td>
 				</tr>
 				<tr>
-					<th id="par" class="text-md border border-slate-200 px-2 py-4">
+					<th id="par" class="text-md border border-slate-200 px-2 py-2">
 						Par
 					</th>
 					<td
@@ -196,7 +199,7 @@
 					></td>
 				</tr>
 				<tr>
-					<th id="handicap" class="text-md border border-slate-200 px-2 py-4">
+					<th id="handicap" class="text-md border border-slate-200 px-2 py-2">
 						Handicap
 					</th>
 					<td
@@ -241,7 +244,7 @@
 					></td>
 				</tr>
 				<tr>
-					<!-- <th id="handicap" class="text-md border border-slate-200 px-2 py-4">
+					<!-- <th id="handicap" class="text-md border border-slate-200 px-2 py-2">
 						<input
 							type="text"
 							id="player1"
@@ -251,7 +254,7 @@
 					</th>
 				</tr>
 				<tr>
-					<th id="handicap" class="text-md border border-slate-200 px-2 py-4">
+					<th id="handicap" class="text-md border border-slate-200 px-2 py-2">
 						<input
 							type="text"
 							id="player2"
@@ -261,7 +264,7 @@
 					</th>
 				</tr>
 				<tr>
-					<th id="handicap" class="text-md border border-slate-200 px-2 py-4">
+					<th id="handicap" class="text-md border border-slate-200 px-2 py-2">
 						<input
 							type="text"
 							id="player3"
@@ -271,7 +274,7 @@
 					</th>
 				</tr>
 				<tr>
-					<th id="handicap" class="text-md border border-slate-200 px-2 py-4">
+					<th id="handicap" class="text-md border border-slate-200 px-2 py-2">
 						<input
 							type="text"
 							id="player4"
@@ -290,7 +293,7 @@
 					Back 9
 				</caption>
 				<tr id="backNineHoleRow">
-					<th class="text-md border border-slate-200 px-2 py-4">Hole</th>
+					<th class="text-md border border-slate-200 px-2 py-2">Hole</th>
 					<td
 						id="hole10"
 						class="text-md border border-slate-200 text-center w-20"
@@ -359,7 +362,7 @@
 					</th>
 				</tr>
 				<tr>
-					<th id="totalYards" class="text-md border border-slate-200 px-2 py-4">
+					<th id="totalYards" class="text-md border border-slate-200 px-2 py-2">
 						Yardage
 					</th>
 					<td
@@ -408,7 +411,7 @@
 					></td>
 				</tr>
 				<tr>
-					<th id="par" class="text-md border border-slate-200 px-2 py-4">
+					<th id="par" class="text-md border border-slate-200 px-2 py-2">
 						Par
 					</th>
 					<td
@@ -457,7 +460,7 @@
 					></td>
 				</tr>
 				<tr>
-					<th id="handicap" class="text-md border border-slate-200 px-2 py-4">
+					<th id="handicap" class="text-md border border-slate-200 px-2 py-2">
 						Handicap
 					</th>
 					<td
@@ -506,7 +509,7 @@
 					></td>
 				</tr>
 				<tr>
-					<!-- <th id="handicap" class="text-md border border-slate-200 px-2 py-4">
+					<!-- <th id="handicap" class="text-md border border-slate-200 px-2 py-2">
 						<input
 							type="text"
 							id="player1"
@@ -516,7 +519,7 @@
 					</th>
 				</tr>
 				<tr>
-					<th id="handicap" class="text-md border border-slate-200 px-2 py-4">
+					<th id="handicap" class="text-md border border-slate-200 px-2 py-2">
 						<input
 							type="text"
 							id="player2"
@@ -526,7 +529,7 @@
 					</th>
 				</tr>
 				<tr>
-					<th id="handicap" class="text-md border border-slate-200 px-2 py-4">
+					<th id="handicap" class="text-md border border-slate-200 px-2 py-2">
 						<input
 							type="text"
 							id="player3"
@@ -536,7 +539,7 @@
 					</th>
 				</tr>
 				<tr>
-					<th id="handicap" class="text-md border border-slate-200 px-2 py-4">
+					<th id="handicap" class="text-md border border-slate-200 px-2 py-2">
 						<input
 							type="text"
 							id="player4"
