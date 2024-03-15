@@ -10,24 +10,27 @@
 		<title>Golf Score App</title>
 	</head>
 
-	<body class="bg-green-800 text-white">
+	<body class="bg-green-800 text-white scroll">
 		<!-- Header - Contains options to select course and teeBox -->
-		<header class="flex bg-emerald-900 items-center px-4 py-2">
+		<header class="flex bg-emerald-900 items-center px-4 py-2 w-screen">
 			<div id="options-div" class="flex flex-col">
-				<div id="course-options" class="flex justify-start items-center">
+				<div id="course-options" class="flex items-center">
 					<select
 						id="course-select"
-						class="rounded-md text-sm bg-transparent"
+						class="rounded-md text-sm bg-transparent cursor-pointer"
 					></select>
 				</div>
 				<div id="tee-box-options" class="flex justify-start items-center mt-2">
 					<select
 						id="tee-box-select"
-						class="rounded-md text-sm bg-transparent"
+						class="rounded-md text-sm bg-transparent cursor-pointer"
 					></select>
 				</div>
 			</div>
-			<div id="displayCourseAndTeeType" class="text-3xl mx-32"></div>
+			<div
+				id="displayCourseAndTeeType"
+				class="lg:text-3xl md:text-md mx-32"
+			></div>
 		</header>
 
 		<div id="addPlayer" class="mx-6 my-4">
@@ -40,8 +43,10 @@
 		</div>
 
 		<!-- Table for Front-9 -->
-		<div id="frontNine" class="container mx-auto mt-6 flex">
-			<table class="table-auto text-left mx-48 flex flex-col justify-start">
+		<div id="frontNine" class="mt-6 mx-6 overflow-x-auto">
+			<table
+				class="table-auto text-left sm:mx-6 lg:mx-16 flex flex-col justify-start"
+			>
 				<caption class="caption-top text-xl mb-2">
 					Front 9
 				</caption>
@@ -49,108 +54,111 @@
 					<th class="text-md border border-slate-200 px-2 py-2">Hole</th>
 					<td
 						id="hole1"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					>
 						1
 					</td>
 					<td
 						id="hole2"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					>
 						2
 					</td>
 					<td
 						id="hole3"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					>
 						3
 					</td>
 					<td
 						id="hole4"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					>
 						4
 					</td>
 					<td
 						id="hole5"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					>
 						5
 					</td>
 					<td
 						id="hole6"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					>
 						6
 					</td>
 					<td
 						id="hole7"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					>
 						7
 					</td>
 					<td
 						id="hole8"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					>
 						8
 					</td>
 					<td
 						id="hole9"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					>
 						9
 					</td>
 					<th
 						id="outCell"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md p-2 border border-slate-200 text-center w-1/8"
 					>
 						OUT
 					</th>
 				</tr>
 				<tr>
-					<th id="totalYards" class="text-md border border-slate-200 px-2 py-2">
+					<th
+						id="frontNineYards"
+						class="text-md border border-slate-200 px-2 py-2"
+					>
 						Yardage
 					</th>
 					<td
 						id="hole1Yards"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole2Yards"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole3Yards"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole4Yards"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole5Yards"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole6Yards"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole7Yards"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole8Yards"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole9Yards"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="outYards"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 				</tr>
 				<tr>
@@ -159,43 +167,43 @@
 					</th>
 					<td
 						id="hole1Par"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole2Par"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole3Par"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole4Par"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole5Par"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole6Par"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole7Par"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole8Par"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole9Par"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="outPar"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 				</tr>
 				<tr>
@@ -204,47 +212,47 @@
 					</th>
 					<td
 						id="hole1Hcp"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole2Hcp"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole3Hcp"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole4Hcp"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole5Hcp"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole6Hcp"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole7Hcp"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole8Hcp"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole9Hcp"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="outHcp"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 				</tr>
-				<tr>
-					<!-- <th id="handicap" class="text-md border border-slate-200 px-2 py-2">
+				<tr id="player1Row">
+					<th id="handicap" class="text-md border border-slate-200 px-2 py-2">
 						<input
 							type="text"
 							id="player1"
@@ -252,8 +260,75 @@
 							class="px-2 bg-transparent border border-slate-100 rounded-md w-24"
 						/>
 					</th>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="text"
+							id="p1Hole1"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="text"
+							id="p1Hole2"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="text"
+							id="p1Hole3"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="text"
+							id="p1Hole4"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="text"
+							id="p1Hole5"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="text"
+							id="p1Hole6"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="text"
+							id="p1Hole7"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="text"
+							id="p1Hole8"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="text"
+							id="p1Hole9"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2"
+						/>
+					</td>
+					<td
+						id="p1Out"
+						class="text-md border border-slate-200 text-center w-1/8"
+					></td>
 				</tr>
-				<tr>
+				<tr id="player2Row">
 					<th id="handicap" class="text-md border border-slate-200 px-2 py-2">
 						<input
 							type="text"
@@ -263,7 +338,7 @@
 						/>
 					</th>
 				</tr>
-				<tr>
+				<tr id="player3Row">
 					<th id="handicap" class="text-md border border-slate-200 px-2 py-2">
 						<input
 							type="text"
@@ -273,7 +348,7 @@
 						/>
 					</th>
 				</tr>
-				<tr>
+				<tr id="player4Row">
 					<th id="handicap" class="text-md border border-slate-200 px-2 py-2">
 						<input
 							type="text"
@@ -281,14 +356,16 @@
 							placeholder="Player 4"
 							class="px-2 bg-transparent border border-slate-100 rounded-md w-24"
 						/>
-					</th> -->
+					</th>
 				</tr>
 			</table>
 		</div>
 
 		<!-- Table for the back 9 -->
-		<div id="backNine" class="container mx-auto mt-12 flex">
-			<table class="table-auto text-left mx-48 flex flex-col justify-start">
+		<div id="backNine" class="mt-6 mx-6 overflow-x-auto">
+			<table
+				class="table-auto text-left sm:mx-6 lg:mx-16 flex flex-col justify-start"
+			>
 				<caption class="caption-top text-xl mb-2">
 					Back 9
 				</caption>
@@ -296,118 +373,121 @@
 					<th class="text-md border border-slate-200 px-2 py-2">Hole</th>
 					<td
 						id="hole10"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					>
 						10
 					</td>
 					<td
 						id="hole11"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					>
 						11
 					</td>
 					<td
 						id="hole12"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					>
 						12
 					</td>
 					<td
 						id="hole13"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					>
 						13
 					</td>
 					<td
 						id="hole14"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					>
 						14
 					</td>
 					<td
 						id="hole15"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					>
 						15
 					</td>
 					<td
 						id="hole16"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					>
 						16
 					</td>
 					<td
 						id="hole17"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					>
 						17
 					</td>
 					<td
 						id="hole18"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					>
 						18
 					</td>
 					<th
 						id="inCell"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					>
 						IN
 					</th>
 					<th
 						id="totalCell"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					>
 						Total
 					</th>
 				</tr>
 				<tr>
-					<th id="totalYards" class="text-md border border-slate-200 px-2 py-2">
+					<th
+						id="backNineYards"
+						class="text-md border border-slate-200 px-2 py-2"
+					>
 						Yardage
 					</th>
 					<td
 						id="hole10Yards"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole11Yards"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole12Yards"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole13Yards"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole14Yards"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole15Yards"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole16Yards"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole17Yards"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole18Yards"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="inYards"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="totalYards"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 				</tr>
 				<tr>
@@ -416,47 +496,47 @@
 					</th>
 					<td
 						id="hole10Par"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole11Par"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole12Par"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole13Par"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole14Par"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole15Par"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole16Par"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole17Par"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole18Par"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="inPar"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="totalPar"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 				</tr>
 				<tr>
@@ -465,47 +545,47 @@
 					</th>
 					<td
 						id="hole10Hcp"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole11Hcp"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole12Hcp"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole13Hcp"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole14Hcp"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole15Hcp"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole16Hcp"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole17Hcp"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="hole18Hcp"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="inHcp"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 					<td
 						id="totalHcp"
-						class="text-md border border-slate-200 text-center w-20"
+						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 				</tr>
 				<tr>

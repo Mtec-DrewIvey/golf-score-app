@@ -1,8 +1,8 @@
 import { getAvailableCourses } from "./allCourses.js";
-import { getCourseInfo, getTeeBox } from "./courseInfo.js";
+import { getCourseInfo, getTeeBox, displayCourseInfo } from "./courseInfo.js";
 
 // Using Data from getAvailableCourses, display courses to dropdown. Add event listener on change to get specific course info
-async function displayCourses() {
+async function displayAllCourses() {
 	const courses = await getAvailableCourses();
 
 	let courseOptionsHtml = `<option value="" selected disabled>Select a course</option>`;
@@ -21,27 +21,12 @@ async function displayCourses() {
 			await getTeeBox();
 		});
 
-	// document.getElementById("tee-box-select").addEventListener("change", () => {
-	// 	getYards();
-	// });
+	document
+		.getElementById("tee-box-select")
+		.addEventListener("change", async () => {
+			const selectedTeeIndex = document.getElementById("tee-box-select").value;
+			await displayCourseInfo(selectedTeeIndex);
+		});
 }
 
-async function displayCourseInfo() {
-	const course = await getCourseInfo();
-	const holes = course.holes;
-
-	holes.forEach((hole, index) => {
-		const holeRow = document.getElementById("holeRow");
-		const cell = document.createElement("td");
-		cell.classList.add("border");
-		cell.classList.add("border-slate-200");
-		cell.classList.add("text-xl");
-		cell.classList.add("px-4");
-		const holeNum = index + 1;
-
-		cell.textContent = holeNum;
-		holeRow.appendChild(cell);
-	});
-}
-
-displayCourses();
+displayAllCourses();
