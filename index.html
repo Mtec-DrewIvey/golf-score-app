@@ -33,6 +33,7 @@
 			></div>
 		</header>
 
+		<!-- Add Player Button/Input TextBox -->
 		<div id="addPlayer" class="mx-6 my-4">
 			<button
 				id="addPlayerButton"
@@ -40,16 +41,26 @@
 			>
 				Add Player
 			</button>
+			<input
+				type="text"
+				name="player-name"
+				id="playerNameInput"
+				placeholder="Enter Player Name"
+				class="p-2 bg-transparent border border-green-600 text-white"
+			/>
 		</div>
 
 		<!-- Table for Front-9 -->
 		<div id="frontNine" class="mt-6 mx-6 overflow-x-auto">
 			<table
-				class="table-auto text-left sm:mx-6 lg:mx-16 flex flex-col justify-start"
+				id="frontNineTable"
+				class="table-auto text-left sm:mx-6 lg:mx-16 flex flex-col items-center"
 			>
 				<caption class="caption-top text-xl mb-2">
 					Front 9
 				</caption>
+
+				<!-- Start of Front 9 Hole row -->
 				<tr id="frontNineHoleRow">
 					<th class="text-md border border-slate-200 px-2 py-2">Hole</th>
 					<td
@@ -113,6 +124,9 @@
 						OUT
 					</th>
 				</tr>
+				<!-- End of Front 9 Hole row -->
+
+				<!-- Start of Front 9 Yards row -->
 				<tr>
 					<th
 						id="frontNineYards"
@@ -161,6 +175,9 @@
 						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 				</tr>
+				<!-- End of Front 9 Yards row -->
+
+				<!-- Start of Front 9 Par row -->
 				<tr>
 					<th id="par" class="text-md border border-slate-200 px-2 py-2">
 						Par
@@ -206,6 +223,9 @@
 						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 				</tr>
+				<!-- End of Front 9 Par row -->
+
+				<!-- Start of Front 9 Handicap row -->
 				<tr>
 					<th id="handicap" class="text-md border border-slate-200 px-2 py-2">
 						Handicap
@@ -251,20 +271,20 @@
 						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 				</tr>
-				<tr id="player1Row">
-					<th id="handicap" class="text-md border border-slate-200 px-2 py-2">
-						<input
-							type="text"
-							id="player1"
-							placeholder="Player 1"
-							class="px-2 bg-transparent border border-slate-100 rounded-md w-24"
-						/>
-					</th>
+				<!-- End of Front 9 Handicap row -->
+
+				<!-- Start of Front 9 Player Rows -->
+				<tr data-player>
+					<th
+						data-player-name
+						class="text-md border border-slate-200 px-2 py-2"
+					></th>
 					<td class="text-md border border-slate-200 text-center w-1/8">
 						<input
 							type="text"
 							id="p1Hole1"
 							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2"
+							maxlength="2"
 						/>
 					</td>
 					<td class="text-md border border-slate-200 text-center w-1/8">
@@ -272,6 +292,7 @@
 							type="text"
 							id="p1Hole2"
 							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2"
+							maxlength="2"
 						/>
 					</td>
 					<td class="text-md border border-slate-200 text-center w-1/8">
@@ -279,6 +300,7 @@
 							type="text"
 							id="p1Hole3"
 							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2"
+							maxlength="2"
 						/>
 					</td>
 					<td class="text-md border border-slate-200 text-center w-1/8">
@@ -286,6 +308,7 @@
 							type="text"
 							id="p1Hole4"
 							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2"
+							maxlength="2"
 						/>
 					</td>
 					<td class="text-md border border-slate-200 text-center w-1/8">
@@ -293,6 +316,7 @@
 							type="text"
 							id="p1Hole5"
 							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2"
+							maxlength="2"
 						/>
 					</td>
 					<td class="text-md border border-slate-200 text-center w-1/8">
@@ -300,6 +324,7 @@
 							type="text"
 							id="p1Hole6"
 							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2"
+							maxlength="2"
 						/>
 					</td>
 					<td class="text-md border border-slate-200 text-center w-1/8">
@@ -307,6 +332,7 @@
 							type="text"
 							id="p1Hole7"
 							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2"
+							maxlength="2"
 						/>
 					</td>
 					<td class="text-md border border-slate-200 text-center w-1/8">
@@ -314,6 +340,7 @@
 							type="text"
 							id="p1Hole8"
 							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2"
+							maxlength="2"
 						/>
 					</td>
 					<td class="text-md border border-slate-200 text-center w-1/8">
@@ -321,6 +348,7 @@
 							type="text"
 							id="p1Hole9"
 							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2"
+							maxlength="2"
 						/>
 					</td>
 					<td
@@ -328,47 +356,39 @@
 						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 				</tr>
-				<tr id="player2Row">
-					<th id="handicap" class="text-md border border-slate-200 px-2 py-2">
-						<input
-							type="text"
-							id="player2"
-							placeholder="Player 2"
-							class="px-2 bg-transparent border border-slate-100 rounded-md w-24"
-						/>
-					</th>
+				<tr data-player>
+					<th
+						data-player-name
+						class="text-md border border-slate-200 px-2 py-2"
+					></th>
 				</tr>
-				<tr id="player3Row">
-					<th id="handicap" class="text-md border border-slate-200 px-2 py-2">
-						<input
-							type="text"
-							id="player3"
-							placeholder="Player 3"
-							class="px-2 bg-transparent border border-slate-100 rounded-md w-24"
-						/>
-					</th>
+				<tr data-player>
+					<th
+						data-player-name
+						class="text-md border border-slate-200 px-2 py-2"
+					></th>
 				</tr>
-				<tr id="player4Row">
-					<th id="handicap" class="text-md border border-slate-200 px-2 py-2">
-						<input
-							type="text"
-							id="player4"
-							placeholder="Player 4"
-							class="px-2 bg-transparent border border-slate-100 rounded-md w-24"
-						/>
-					</th>
+				<tr data-player>
+					<th
+						data-player-name
+						class="text-md border border-slate-200 px-2 py-2"
+					></th>
 				</tr>
+				<!-- End of Front 9 Player Rows -->
 			</table>
 		</div>
 
 		<!-- Table for the back 9 -->
 		<div id="backNine" class="mt-6 mx-6 overflow-x-auto">
 			<table
-				class="table-auto text-left sm:mx-6 lg:mx-16 flex flex-col justify-start"
+				id="backNineTable"
+				class="table-auto text-left sm:mx-6 lg:mx-16 flex flex-col items-center"
 			>
 				<caption class="caption-top text-xl mb-2">
 					Back 9
 				</caption>
+
+				<!-- Start of Back 9 Hole row -->
 				<tr id="backNineHoleRow">
 					<th class="text-md border border-slate-200 px-2 py-2">Hole</th>
 					<td
@@ -438,6 +458,9 @@
 						Total
 					</th>
 				</tr>
+				<!-- End of Back 9 Hole row -->
+
+				<!-- Start of Back 9 Yards row -->
 				<tr>
 					<th
 						id="backNineYards"
@@ -490,6 +513,9 @@
 						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 				</tr>
+				<!-- End of Back 9 Hole row -->
+
+				<!-- Start of Back 9 Par row -->
 				<tr>
 					<th id="par" class="text-md border border-slate-200 px-2 py-2">
 						Par
@@ -539,6 +565,9 @@
 						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 				</tr>
+				<!-- End of Back 9 Hole row -->
+
+				<!-- Start of Back 9 Handicap row -->
 				<tr>
 					<th id="handicap" class="text-md border border-slate-200 px-2 py-2">
 						Handicap
@@ -588,46 +617,34 @@
 						class="text-md border border-slate-200 text-center w-1/8"
 					></td>
 				</tr>
-				<tr>
-					<!-- <th id="handicap" class="text-md border border-slate-200 px-2 py-2">
-						<input
-							type="text"
-							id="player1"
-							placeholder="Player 1"
-							class="px-2 bg-transparent border border-slate-100 rounded-md w-24"
-						/>
-					</th>
+				<!-- End of Back 9 Handicap row -->
+
+				<!-- Start of Back 9 Player row -->
+				<tr data-player>
+					<th
+						data-player-name
+						class="text-md border border-slate-200 px-2 py-2"
+					></th>
 				</tr>
-				<tr>
-					<th id="handicap" class="text-md border border-slate-200 px-2 py-2">
-						<input
-							type="text"
-							id="player2"
-							placeholder="Player 2"
-							class="px-2 bg-transparent border border-slate-100 rounded-md w-24"
-						/>
-					</th>
+				<tr data-player>
+					<th
+						data-player-name
+						class="text-md border border-slate-200 px-2 py-2"
+					></th>
 				</tr>
-				<tr>
-					<th id="handicap" class="text-md border border-slate-200 px-2 py-2">
-						<input
-							type="text"
-							id="player3"
-							placeholder="Player 3"
-							class="px-2 bg-transparent border border-slate-100 rounded-md w-24"
-						/>
-					</th>
+				<tr data-player>
+					<th
+						data-player-name
+						class="text-md border border-slate-200 px-2 py-2"
+					></th>
 				</tr>
-				<tr>
-					<th id="handicap" class="text-md border border-slate-200 px-2 py-2">
-						<input
-							type="text"
-							id="player4"
-							placeholder="Player 4"
-							class="px-2 bg-transparent border border-slate-100 rounded-md w-24"
-						/>
-					</th> -->
+				<tr data-player>
+					<th
+						data-player-name
+						class="text-md border border-slate-200 px-2 py-2"
+					></th>
 				</tr>
+				<!-- End of Back 9 Player row -->
 			</table>
 		</div>
 	</body>
