@@ -1,0 +1,71 @@
+commit ed4582c25e3bc92ca45305333c65dc814dac0de3
+Author: Drew Ivey <drew.ivey4543@stu.mtec.edu>
+Date:   Tue Mar 19 00:03:25 2024 -0600
+
+    finished creating logic to add player scores together and added Toastr notification when player fills out 18th hole. Tue Mar 19 00:03:25 MDT 2024
+
+commit 3fcb9c73247500e3f002365b76710dba76e54ed4
+Author: Drew Ivey <drew.ivey4543@stu.mtec.edu>
+Date:   Mon Mar 18 09:13:05 2024 -0600
+
+    Updated player functions to populate player in DOM when using addPlayer button. Same player populates in both tables. Mon Mar 18 09:13:05 MDT 2024
+
+commit 2f643adc27bb78ebeff8db8c9f0e1054c6bd6e43
+Author: Drew Ivey <drew.ivey4543@stu.mtec.edu>
+Date:   Fri Mar 15 08:31:32 2024 -0600
+
+    added logic to loop through each hole and display hole info (Yards, Par, HCP). Also get total yards and par info and display on table Fri Mar 15 08:31:32 MDT 2024
+
+commit e4bcac4737e83465cba5a9e8ac11545ec47db813
+Author: Drew Ivey <drew.ivey4543@stu.mtec.edu>
+Date:   Mon Mar 11 09:50:17 2024 -0600
+
+    updated html header to display selected Course (on change) as larger text for clarity. Adding button to add players to scorecards Mon Mar 11 09:50:16 MDT 2024
+
+commit 1aa94d79148d4ce4bfcba5d69645d2f8be5b36da
+Author: Drew Ivey <drew.ivey4543@stu.mtec.edu>
+Date:   Mon Mar 11 08:32:50 2024 -0600
+
+    statically created score card outline.
+
+commit cdfd39952fbee15a3dfbc8b1b0c3c9475cb5ed0b
+Author: Drew Ivey <drew.ivey4543@stu.mtec.edu>
+Date:   Thu Mar 7 09:00:49 2024 -0700
+
+    adding function to display holes dynamically Thu Mar  7 09:00:49 MST 2024
+
+commit abd50ab719d84d31185238d04c6b9d6c78eb1ff4
+Author: Drew Ivey <drew.ivey4543@stu.mtec.edu>
+Date:   Thu Mar 7 07:42:11 2024 -0700
+
+    reorganized js to use ES6 modules Thu Mar  7 07:42:11 MST 2024
+
+commit 0e50a3e72d88f85d5109b3578e9689e9f9ba884a
+Author: Drew Ivey <drew.ivey4543@stu.mtec.edu>
+Date:   Sun Mar 3 15:07:37 2024 -0700
+
+    adding loop to get each hole from the course. Need to access hole to grab teeBox. Sun Mar  3 15:07:37 MST 2024
+
+commit 7ecf17286865284536947281ca36058c65959f50
+Author: Drew Ivey <drew.ivey4543@stu.mtec.edu>
+Date:   Fri Mar 1 07:35:53 2024 -0700
+
+    added event listener and function to return the specific course data when selected from the dropdown. Fri Mar  1 07:35:53 MST 2024
+
+commit aeef07e756b9fe665943e4e106a0045062a38b0e
+Author: Drew Ivey <drew.ivey4543@stu.mtec.edu>
+Date:   Thu Feb 29 13:03:32 2024 -0700
+
+    added js to grab available courses via the api and display the options to the user in a dropdown. started working on scorecard table Thu Feb 29 13:03:32 MST 2024
+
+commit 5861191012fae448fa704ed678bb4ac2010e6dd2
+Author: Drew Ivey <drew.ivey4543@stu.mtec.edu>
+Date:   Thu Feb 29 07:31:39 2024 -0700
+
+    setting up tailwindcss via node. Created folders and gitignore. Thu Feb 29 07:31:39 MST 2024
+
+commit ce609d6906fcaee73852a59a041778cd538b945e
+Author: Drew Ivey <155995115+Mtec-DrewIvey@users.noreply.github.com>
+Date:   Mon Feb 26 10:05:35 2024 -0700
+
+    Initial commit
