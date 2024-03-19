@@ -6,7 +6,32 @@
 
 		<!-- My Stylesheets -->
 		<link rel="stylesheet" href="css/app.css" />
+
+		<!-- Toastr CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"
+			integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<!-- Toastr JS -->
+		<script
+			src="https://code.jquery.com/jquery-3.7.1.min.js"
+			integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"
+			integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+
+		<!-- My scripts -->
 		<script defer src="js/main.js" type="module"></script>
+
 		<title>Golf Score App</title>
 	</head>
 
@@ -281,79 +306,106 @@
 					></th>
 					<td class="text-md border border-slate-200 text-center w-1/8">
 						<input
-							type="text"
-							id="p1Hole1"
-							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2"
-							maxlength="2"
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="1"
+							oninput="validity.valid||(value='');"
 						/>
 					</td>
 					<td class="text-md border border-slate-200 text-center w-1/8">
 						<input
-							type="text"
-							id="p1Hole2"
-							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2"
-							maxlength="2"
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="2"
+							oninput="validity.valid||(value='');"
 						/>
 					</td>
 					<td class="text-md border border-slate-200 text-center w-1/8">
 						<input
-							type="text"
-							id="p1Hole3"
-							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2"
-							maxlength="2"
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="3"
+							oninput="validity.valid||(value='');"
 						/>
 					</td>
 					<td class="text-md border border-slate-200 text-center w-1/8">
 						<input
-							type="text"
-							id="p1Hole4"
-							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2"
-							maxlength="2"
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="4"
+							oninput="validity.valid||(value='');"
 						/>
 					</td>
 					<td class="text-md border border-slate-200 text-center w-1/8">
 						<input
-							type="text"
-							id="p1Hole5"
-							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2"
-							maxlength="2"
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="5"
+							oninput="validity.valid||(value='');"
 						/>
 					</td>
 					<td class="text-md border border-slate-200 text-center w-1/8">
 						<input
-							type="text"
-							id="p1Hole6"
-							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2"
-							maxlength="2"
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="6"
+							oninput="validity.valid||(value='');"
 						/>
 					</td>
 					<td class="text-md border border-slate-200 text-center w-1/8">
 						<input
-							type="text"
-							id="p1Hole7"
-							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2"
-							maxlength="2"
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="7"
+							oninput="validity.valid||(value='');"
 						/>
 					</td>
 					<td class="text-md border border-slate-200 text-center w-1/8">
 						<input
-							type="text"
-							id="p1Hole8"
-							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2"
-							maxlength="2"
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="8"
+							oninput="validity.valid||(value='');"
 						/>
 					</td>
 					<td class="text-md border border-slate-200 text-center w-1/8">
 						<input
-							type="text"
-							id="p1Hole9"
-							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2"
-							maxlength="2"
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="9"
+							oninput="validity.valid||(value='');"
 						/>
 					</td>
 					<td
-						id="p1Out"
 						class="text-md border border-slate-200 text-center w-1/8"
+						data-out-total
 					></td>
 				</tr>
 				<tr data-player>
@@ -361,18 +413,327 @@
 						data-player-name
 						class="text-md border border-slate-200 px-2 py-2"
 					></th>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="1"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="2"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="3"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="4"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="5"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="6"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="7"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="8"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="9"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td
+						class="text-md border border-slate-200 text-center w-1/8"
+						data-out-total
+					></td>
 				</tr>
 				<tr data-player>
 					<th
 						data-player-name
 						class="text-md border border-slate-200 px-2 py-2"
 					></th>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="1"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="2"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="3"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="4"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="5"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="6"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="7"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="8"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="9"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td
+						class="text-md border border-slate-200 text-center w-1/8"
+						data-out-total
+					></td>
 				</tr>
 				<tr data-player>
 					<th
 						data-player-name
 						class="text-md border border-slate-200 px-2 py-2"
 					></th>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="1"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="2"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="3"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="4"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="5"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="6"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="7"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="8"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="9"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td
+						class="text-md border border-slate-200 text-center w-1/8"
+						data-out-total
+					></td>
 				</tr>
 				<!-- End of Front 9 Player Rows -->
 			</table>
@@ -625,24 +986,452 @@
 						data-player-name
 						class="text-md border border-slate-200 px-2 py-2"
 					></th>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="10"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="11"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="12"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="13"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="14"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="15"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="16"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="17"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="18"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td
+						class="text-md border border-slate-200 text-center w-1/8"
+						data-in-total
+					></td>
+					<td
+						class="text-md border border-slate-200 text-center w-1/8"
+						data-round-total
+					></td>
 				</tr>
 				<tr data-player>
 					<th
 						data-player-name
 						class="text-md border border-slate-200 px-2 py-2"
 					></th>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="10"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="11"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="12"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="13"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="14"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="15"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="16"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="17"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="18"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td
+						class="text-md border border-slate-200 text-center w-1/8"
+						data-in-total
+					></td>
+					<td
+						class="text-md border border-slate-200 text-center w-1/8"
+						data-round-total
+					></td>
 				</tr>
 				<tr data-player>
 					<th
 						data-player-name
 						class="text-md border border-slate-200 px-2 py-2"
 					></th>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="10"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="11"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="12"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="13"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="14"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="15"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="16"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="17"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="18"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td
+						class="text-md border border-slate-200 text-center w-1/8"
+						data-in-total
+					></td>
+					<td
+						class="text-md border border-slate-200 text-center w-1/8"
+						data-round-total
+					></td>
 				</tr>
 				<tr data-player>
 					<th
 						data-player-name
 						class="text-md border border-slate-200 px-2 py-2"
 					></th>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="10"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="11"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="12"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="13"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="14"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="15"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="16"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="17"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td class="text-md border border-slate-200 text-center w-1/8">
+						<input
+							type="number"
+							class="px-2 bg-transparent border border-slate-100 rounded-md w-10 text-center m-2 arrow-hide"
+							min="1"
+							max="99"
+							data-input-type="score"
+							data-hole="18"
+							oninput="validity.valid||(value='');"
+						/>
+					</td>
+					<td
+						class="text-md border border-slate-200 text-center w-1/8"
+						data-in-total
+					></td>
+					<td
+						class="text-md border border-slate-200 text-center w-1/8"
+						data-round-total
+					></td>
 				</tr>
 				<!-- End of Back 9 Player row -->
 			</table>
